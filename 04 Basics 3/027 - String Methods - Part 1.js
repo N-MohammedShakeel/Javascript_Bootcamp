@@ -1,27 +1,17 @@
 /*
-    String Methods
-        - Access With Index
-        - Access With charAt()
-        - length
-        - trim()
-        - toUpperCase()
-        - toLowerCase()
-        - Chain Methods
+    ====================
+    String Methods - Part 1 (Basic)
+    ====================
 */
 
-let theName = "  Mohammed  ";
+let str = "Hello JavaScript";
 
-console.log(theName);
-console.log(theName[1]);
-console.log(theName[5]);
-
-console.log(theName.charAt(1));
-console.log(theName.charAt(5));
-
-console.log(theName.length);
-console.log(theName.trim());
-
-console.log(theName.toUpperCase());
-console.log(theName.toLowerCase());
-
-console.log(theName.trim().charAt(2).toUpperCase());
+console.log(str.length); // 16
+console.log(str.charAt(0)); // "H"
+console.log(str.charCodeAt(0)); // 72 (Unicode)
+console.log(str.at(-1)); // "t" (last character)
+console.log(str.toUpperCase()); // "HELLO JAVASCRIPT"
+console.log(str.toLowerCase()); // "hello javascript"
+console.log(str.trim()); // removes spaces (start & end)
+console.log(str.trimStart()); // removes spaces from start
+console.log(str.trimEnd()); // removes spaces from end

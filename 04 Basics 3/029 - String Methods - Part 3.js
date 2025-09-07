@@ -1,36 +1,16 @@
 /*
-    String Methods
-        - substring(Start [Mand], End [Opt] Not Including End)
-            --- Start > End Will Swap
-            --- Start < 0 It Start From 0
-            --- Use Length To Get Last Character
-        - substr(Start [Mand], Characters To Extract)
-            --- Start >= Length = ""
-            --- Negative Start From End
-        - includes(Value [Mand], Start [Opt] Default 0) [ES6]
-        - startsWith(Value [Mand], Start [Opt] Default 0) [ES6]
-        - endsWith(Value [Mand], Length [Opt] Default Full Length) [ES6]
+    ====================
+    String Methods - Part 3 (Modify & Split)
+    ====================
 */
 
-let a = "MS Web Bootcamp";
+let str = "Hello JavaScript";
 
-console.log(a.length);
-
-console.log(a.substring(2, 6));
-console.log(a.substring(6, 2));
-console.log(a.substring(-10, 6)); // 0 - 6
-console.log(a.substring(a.length - 5, a.length - 3));
-
-console.log(a.substr(0, 6));
-console.log(a.substr(17));
-console.log(a.substr(-3));
-console.log(a.substr(-5, 2));
-
-console.log(a.includes("Web"));
-console.log(a.includes("Web", 8));
-
-console.log(a.startsWith("M"));
-console.log(a.startsWith("M", 2));
-console.log(a.startsWith("zero", 2));
-
-console.log(a.endsWith("l"));
+console.log(str.slice(0, 5)); // "Hello" (extract part)
+console.log(str.substring(6)); // "JavaScript" (from index 6)
+console.log(str.substr(6, 4)); // "Java" (start at 6, take 4 chars)
+console.log(str.replace("Java", "Type")); // "Hello TypeScript"
+console.log(str.replaceAll("a", "@")); // "Hello J@v@Script"
+console.log(str.split(" ")); // ["Hello", "JavaScript"]
+console.log(str.concat(" ❤️")); // "Hello JavaScript ❤️"
+console.log("Repeat: ", str.repeat(2)); // repeats string twice

@@ -6,7 +6,6 @@
 
 console.log('ms Web "Bootcamp"');
 console.log("ms Web 'Bootcamp'");
-console.log('ms Web "Bootcamp"');
 console.log("ms \\ Web 'Bootcamp'");
 console.log(
   "ms \

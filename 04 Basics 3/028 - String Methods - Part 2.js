@@ -1,22 +1,13 @@
 /*
-    String Methods
-        - indexOf(Value [Mand], Start [Opt] 0)
-        - lastIndexOf(Value [Mand], Start [Opt] Length)
-        - slice(Start [Mand], End [Opt] Not Include End)
-        - repeat(Times) [ES6]
-        - split(Separator [Opt], Limit [Opt])
+    ====================
+    String Methods - Part 2 (Search & Check)
+    ====================
 */
 
-let a = "ms Web Bootcamp";
+let str = "Hello JavaScript";
 
-console.log(a.indexOf("Web"));
-console.log(a.indexOf("Web", 8));
-console.log(a.indexOf("o")); // 5
-console.log(a.lastIndexOf("o")); // 15
-
-console.log(a.slice(2, 6));
-console.log(a.slice(-5, -3));
-
-console.log(a.repeat(5));
-
-console.log(a.split("", 6));
+console.log(str.indexOf("Java")); // 6 (position)
+console.log(str.lastIndexOf("a")); // 7 (last position)
+console.log(str.includes("Script")); // true
+console.log(str.startsWith("Hello")); // true
+console.log(str.endsWith("JS")); // false

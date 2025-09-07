@@ -1,27 +1,13 @@
-/*
-    Template Literals (Template Strings)
-*/
-// First Example
-let a = "We Love";
-let b = "JavaScript";
-let c = "And";
-let d = "Programming";
+// -----------------------
+// 2. Using Template Literals (Recommended in ES6+)
+// -----------------------
+// Template literals use backticks (` `) and ${} for variables.
+let age = 25;
+let intro = `Hi, my name is ${fullName} and I am ${age} years old.`;
+console.log("Using Template Literal:", intro);
 
-console.log((a = ' "" ' + b + "\n" + c + " " + d));
-
-console.log(`${a} "" '' \\ ${b}
-${c} ${d}`);
-
-// Second Example
-let title = "ms";
-let desc = "ms Web Bootcamp";
-
-let markup = `
-    <div class="card">
-        <div class="child">
-            <h2>${title}</h2>
-            <p>${desc}</p>
-        </div>
-    </div>
-`;
-document.write(markup);
+// You can even write multi-line strings easily
+let multiLine = `This is line 1
+This is line 2
+This is line 3`;
+console.log("Multi-line String:\n", multiLine);

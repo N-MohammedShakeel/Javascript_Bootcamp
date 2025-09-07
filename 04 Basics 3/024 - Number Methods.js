@@ -1,28 +1,16 @@
 /*
+    ====================
     Number Methods
-        - Two Dots To Call A Method
-        - toString()
-        - toFixed()
-        - parseInt()
-        - parseFloat()
-        - isInteger() [ES6]
-        - isNaN() [ES6]
+    ====================
 */
 
-console.log((100).toString());
-console.log((100.1).toString());
+let myNum = 123.456;
 
-console.log((100.554555).toFixed(2));
-
-console.log(Number("100 Osama"));
-console.log(+"100 Osama");
-console.log(parseInt("100 Osama"));
-console.log(parseInt("Osama 100 Osama"));
-console.log(parseInt("100.500 Osama"));
-console.log(parseFloat("100.500 Osama"));
-
-console.log(Number.isInteger("100"));
-console.log(Number.isInteger(100.5));
-console.log(Number.isInteger(100));
-
-console.log(Number.isNaN("Osama" / 20));
+console.log(myNum.toString()); // "123.456"
+console.log(myNum.toFixed(2)); // "123.46" (round to 2 decimals)
+console.log(myNum.toPrecision(4)); // "123.5" (total digits)
+console.log(Number.isInteger(myNum)); // false
+console.log(Number.isNaN(myNum)); // false
+console.log(Number("100")); // 100 (convert string to number)
+console.log(Number.parseFloat("10.5px")); // 10.5
+console.log(Number.parseInt("10.5px")); // 10
