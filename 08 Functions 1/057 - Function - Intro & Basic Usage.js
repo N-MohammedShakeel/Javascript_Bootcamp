@@ -1,17 +1,27 @@
 /*
-    Function
-        - What Is Function ?
-        - User-Defined vs Built In
-        - Syntax + Basic Usage
-        - Example From Real Life
-        - Parameter + Argument
-        - Practical Example
+    ==============================
+    📌 FUNCTION INTRODUCTION
+    ==============================
+    - Functions group reusable code.
+    - Functions can accept inputs (parameters) and return outputs.
+    - Syntax:
+
+    function functionName(parameters) {
+        // code
+    }
 */
 
-function sayHello(userName) {
-    console.log(`Hi ${userName}`);
+function greet() {
+  console.log("Hello from function!");
 }
 
-sayHello("Osama");
-sayHello("Sayed");
-sayHello("Ali");
+// Calling the function
+greet();
+
+// Function with parameters
+function sayHello(name) {
+  console.log("Hello", name);
+}
+
+sayHello("Alice");
+sayHello("Bob");

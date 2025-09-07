@@ -1,16 +1,21 @@
 /*
-    Function
-        - Return
-        - Automatic Semicolon Insertion [No Line Terminator Allowed]
-        - Interrupting
+    ==============================
+    📌 RETURN STATEMENT
+    ==============================
+    - Used to send value back from a function
 */
 
-function generate(start, end) {
-    for (let i = start; i <= end; i++) {
-        if (i === 15) {
-            return `Interrupting`;
-        }
-        console.log(i);
-    }
+function square(num) {
+  return num * num;
 }
-generate(10, 20);
+
+let result = square(5);
+console.log(result); // 25
+
+// Function returning multiple values using array/object
+function calculate(a, b) {
+  return { sum: a + b, product: a * b };
+}
+
+let { sum, product } = calculate(3, 4);
+console.log(sum, product); // 7 12

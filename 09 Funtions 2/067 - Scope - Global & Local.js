@@ -1,19 +1,20 @@
 /*
-    Scope
-        - Global And Local Scope
+    ==============================
+    📌 GLOBAL vs LOCAL SCOPE
+    ==============================
+    - Global: Defined outside all functions → accessible everywhere.
+    - Local: Defined inside a function → accessible only within that function.
 */
 
-var a = 1;
-let b = 2;
+let globalVar = "I am global";
 
-function showText() {
-    var a = 10;
-    let b = 20;
-    console.log(`Function - From Local ${a}`);
-    console.log(`Function - From Local ${b}`);
+function testScope() {
+  let localVar = "I am local";
+  console.log(globalVar); // ✅ Accessible
+  console.log(localVar); // ✅ Accessible
 }
 
-console.log(`From Global ${a}`);
-console.log(`From Global ${b}`);
+testScope();
 
-showText();
+// console.log(localVar); ❌ ReferenceError: localVar is not defined
+console.log(globalVar); // ✅ Still accessible

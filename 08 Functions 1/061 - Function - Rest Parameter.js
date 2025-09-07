@@ -1,16 +1,18 @@
 /*
-    Function
-        - Rest Parameters
-        - Only One Allowed
-        - Must Be Last Element
+    ==============================
+    📌 REST PARAMETERS
+    ==============================
+    - Collect multiple arguments into an array
+    - Syntax: ...parameterName
 */
 
-function calc(...numbers) {
-    // console.log(Array.isArray(numbers));
-    let result = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        result += numbers[i]; // result = result + numbers[i]
-    }
-    return `Final Result Is ${result}`;
+function sumAll(...nums) {
+  let total = 0;
+  for (let n of nums) {
+    total += n;
+  }
+  return total;
 }
-console.log(calc(10, 20, 10, 30, 50, 30));
+
+console.log(sumAll(1, 2, 3, 4)); // 10
+console.log(sumAll(5, 10)); // 15

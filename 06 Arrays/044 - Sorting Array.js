@@ -1,10 +1,15 @@
 /*
-    Arrays Methods [Sort]
-        - sort(Function [Opt])
-        - reverse
+    ==============================
+    📌 SORTING ARRAYS
+    ==============================
 */
 
-let myFriends = [10, "Sayed", "Mohamed", "90", 9000, 100, 20, "10", -20, -10];
+let letters = ["d", "a", "c", "b"];
+console.log(letters.sort()); // [ 'a', 'b', 'c', 'd' ]
 
-console.log(myFriends);
-console.log(myFriends.sort().reverse());
+let nums = [10, 5, 40, 2];
+console.log(nums.sort()); // [ 10, 2, 40, 5 ] (string sort!)
+console.log(nums.sort((a, b) => a - b)); // [ 2, 5, 10, 40 ] (numeric sort)
+
+// ✅ reverse()
+console.log(nums.reverse()); // [ 40, 10, 5, 2 ]

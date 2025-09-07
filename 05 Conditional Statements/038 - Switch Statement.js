@@ -1,36 +1,25 @@
 /*
-    Switch Statement
-        switch(expression) {
-            case 1:
-                Code Block
-                break;
-
-            case 2:
-                Code Block
-                break;
-
-            default:
-                Code Block
-        }
-    - Default Ordering
-    - Multiple Match
-    - ===
+    ==============================
+    switch Statement
+    ==============================
+    - Used when we have multiple cases for a single variable.
 */
 
-let day = "A";
+let day = 3;
 
 switch (day) {
-    default:
-        console.log("Unknown Day");
-        break;
-    case 0:
-        console.log("Saturday");
-        break;
-    case 1:
-        console.log("Sunday");
-        break;
-    case 2:
-    case 3:
-        console.log("Monday");
-        break;
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  default:
+    console.log("Other day");
 }

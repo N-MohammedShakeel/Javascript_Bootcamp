@@ -1,13 +1,13 @@
 /*
+    ==============================
     Logical Operators
-        ! => Not
-        && => And
-        || => Or
+    ==============================
+    && (AND)   → true if BOTH conditions are true
+    || (OR)    → true if ANY one condition is true
+    !  (NOT)   → reverses boolean value
 */
 
-console.log(true);
-console.log(!true);
-
-console.log(!(10 == "10"));
-console.log(10 == "10" && 10 > 8 && 10 > 50);
-console.log(10 == "10" || 10 > 80 || 10 > 50);
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(true || false); // true
+console.log(!true); // false

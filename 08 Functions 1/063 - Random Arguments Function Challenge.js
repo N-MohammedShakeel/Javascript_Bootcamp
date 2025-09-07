@@ -1,18 +1,25 @@
 /*
-    Function - Random Argument Challenge
-    ====================================
-    Create Function showDetails
-    Function Accept 3 Parameters [a, b, c]
-    Data Types For Info Is
-        - String => Name
-        - Number => Age
-        - Boolean => Status
-    Argument Is Random
-    Data Is Not Sorted Output Depend On Data Types
-        - Use Ternary Conditional Operator
+    ==============================
+    📌 HANDLING RANDOM ARGUMENTS
+    ==============================
+    - "arguments" object is available in normal functions (not in arrow functions)
+    - It contains all arguments passed to a function
 */
-console.log(checkStatus("Philo", 16, true)); // Output => "Hello Philo, Your Age Is 16, You Are Available For Hire"
-console.log(checkStatus(16, "Philo", true)); // Output => "Hello Philo, Your Age Is 16, You Are Available For Hire"
-console.log(checkStatus(true, 16, "Philo")); // Output => "Hello Philo, Your Age Is 16, You Are Available For Hire"
-console.log(checkStatus(false, "Philo", 16)); // Output => "Hello Philo, Your Age Is 16, You Are Not Available For Hire"
-console.log(checkStatus("Philo", false, 16)); // Output => "Hello Philo, Your Age Is 16, You Are Not Available For Hire"
+
+function showArgs() {
+  console.log("Number of arguments:", arguments.length);
+  console.log("Arguments:", arguments);
+}
+
+showArgs("A", 10, true, [1, 2, 3]);
+
+// Example: sum using arguments
+function sum() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sum(2, 3, 4)); // 9

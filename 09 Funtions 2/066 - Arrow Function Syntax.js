@@ -1,26 +1,31 @@
 /*
-    Function
-        - Arrow Function
-        -- Regular vs Arrow [Param + No Param]
-        -- Multiple Lines
+    ==============================
+    📌 ARROW FUNCTIONS
+    ==============================
+    - Introduced in ES6.
+    - Shorter syntax.
+    - Does NOT have its own 'this', uses lexical 'this'.
 */
 
-let print = function () {
-    return 10;
+// 1. Normal function
+const add = function (a, b) {
+  return a + b;
 };
 
-let print = () => 10;
+// 2. Arrow function equivalent
+const addArrow = (a, b) => a + b;
 
-let print = function (num) {
-    return num;
-};
+console.log(add(3, 4)); // 7
+console.log(addArrow(3, 4)); // 7
 
-let print = (num) => num;
+// Arrow function with single parameter
+const square = (x) => x * x;
+console.log(square(5)); // 25
 
-let print = function (num1, num2) {
-    return num1 + num2;
-};
+// Arrow function with no parameters
+const sayHi = () => console.log("Hi!");
+sayHi();
 
-let print = (num1, num2) => num1 + num2;
-
-console.log(print(100, 50));
+// Arrow function returning object
+const createUser = (name, age) => ({ name, age });
+console.log(createUser("Alice", 25));

@@ -1,12 +1,19 @@
 /*
-    Array Methods
-        - Length
+    ==============================
+    📌 USING LENGTH WITH ARRAYS
+    ==============================
 */
 
-// Index Start From 0 [ 0, 1, 2, 3, 4 ]
+let colors = ["Red", "Green", "Blue", "Yellow"];
+console.log(colors.length); // 4
 
-let myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa"];
+// Access last element using length
+console.log(colors[colors.length - 1]); // Yellow
 
-myFriends.length = 2;
+// Add new element at end using length
+colors[colors.length] = "Purple";
+console.log(colors); // [ 'Red', 'Green', 'Blue', 'Yellow', 'Purple' ]
 
-console.log(myFriends);
+// Shrink array using length
+colors.length = 3;
+console.log(colors); // [ 'Red', 'Green', 'Blue' ]

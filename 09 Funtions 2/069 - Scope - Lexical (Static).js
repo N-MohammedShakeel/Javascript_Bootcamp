@@ -1,26 +1,34 @@
 /*
-    Scope
-        - Lexical Scope
-
-    Search
-        - Execution Context
-        - Lexical Environment
+    ==============================
+    📌 LEXICAL (STATIC) SCOPE
+    ==============================
+    - Inner functions can access variables from their outer function.
+    - Scope is determined by where the function is written (not where it is called).
 */
 
-function parent() {
-    let a = 10;
+function outer() {
+  let outerVar = "I am from outer";
 
-    function child() {
-        console.log(a);
-        console.log(`From Child ${b}`);
+  function inner() {
+    console.log(outerVar); // ✅ Can access outer variable
+  }
 
-        function grand() {
-            let b = 100;
-            console.log(`From Grand ${a}`);
-            console.log(`From Grand ${b}`);
-        }
-        grand();
-    }
-    child();
+  return inner;
 }
-parent();
+
+const innerFn = outer();
+innerFn(); // "I am from outer"
+
+// Example with nested levels
+function levelOne() {
+  let a = 10;
+  function levelTwo() {
+    let b = 20;
+    function levelThree() {
+      console.log(a, b); // ✅ Lexical scope allows access
+    }
+    levelThree();
+  }
+  levelTwo();
+}
+levelOne();

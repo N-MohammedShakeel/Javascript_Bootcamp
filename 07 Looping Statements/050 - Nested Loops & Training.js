@@ -1,22 +1,21 @@
 /*
-    Loop
-        - Nested Loops
+    ==============================
+    📌 NESTED LOOPS
+    ==============================
+    - Loop inside another loop
 */
 
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
-let colors = ["Red", "Green", "Black"];
-let models = [2020, 2021];
+for (let i = 1; i <= 3; i++) {
+  console.log("Outer Loop i =", i);
+  for (let j = 1; j <= 2; j++) {
+    console.log("   Inner Loop j =", j);
+  }
+}
 
-for (let i = 0; i < products.length; i++) {
-    console.log("#".repeat(15));
-    console.log(`# ${products[i]}`);
-    console.log("#".repeat(15));
-    console.log("Colors: ");
-    for (let j = 0; j < colors.length; j++) {
-        console.log(`- ${colors[j]}`);
-    }
-    console.log("Models: ");
-    for (let k = 0; k < models.length; k++) {
-        console.log(`- ${models[k]}`);
-    }
+// Example: Multiplication table (2 to 3)
+for (let i = 2; i <= 3; i++) {
+  console.log(`Table of ${i}:`);
+  for (let j = 1; j <= 5; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
 }

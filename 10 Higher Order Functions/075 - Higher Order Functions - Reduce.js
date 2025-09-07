@@ -1,28 +1,31 @@
 /*
-    - Reduce
-        --- method executes a reducer function on each element of the array,
-        --- resulting in a single output value.
-
-    - Syntax
-        reduce(callBackFunc(Accumulator, Current Val, Current Index, Source Array) { }, initialValue)
-            - Accumulator => the accumulated value previously returned in the last invocation
-            - Current Val => The current element being processed in the array
-            - Index => The index of the current element being processed in the array.
-                -- Starts from index 0 if an initialValue is provided.
-                -- Otherwise, it starts from index 1.
-            - Array => The Current Array
+    ==============================
+    📌 HOF: REDUCE()
+    ==============================
+    - reduce() reduces an array to a single value.
+    - Takes a callback with (accumulator, currentValue).
+    - Syntax:
+        array.reduce((acc, current, index, array) => { ... }, initialValue)
 */
 
-let nums = [10, 20, 15, 30];
+const numbers = [1, 2, 3, 4, 5];
 
-let add = nums.reduce(function (acc, current, index, arr) {
-    console.log(`Acc => ${acc}`);
-    console.log(`Current Element => ${current}`);
-    console.log(`Current Element Index => ${index}`);
-    console.log(`Array => ${arr}`);
-    console.log(acc + current);
-    console.log(`#############`);
-    return acc + current;
-}, 5);
+// Example 1: Sum of numbers
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log("Sum:", sum); // 15
 
-console.log(add);
+// Example 2: Find maximum
+const max = numbers.reduce(
+  (acc, curr) => (curr > acc ? curr : acc),
+  numbers[0]
+);
+console.log("Max:", max); // 5
+
+// Example 3: Count occurrences
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log("Fruit Count:", count);
+// { apple: 3, banana: 2, orange: 1 }

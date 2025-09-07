@@ -1,20 +1,23 @@
 /*
-    Loop Control
-        - Break
-        - Continue
-        - Label
+    ==============================
+    📌 LOOP CONTROL STATEMENTS
+    ==============================
+    break   → exit loop immediately
+    continue→ skip current iteration
 */
 
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    console.log("Breaking at i =", i);
+    break; // exit loop completely
+  }
+  console.log(i);
+}
 
-let colors = ["Red", "Green", "Black"];
-
-mainLoop: for (let i = 0; i < products.length; i++) {
-    console.log(products[i]);
-    nestedLoop: for (let j = 0; j < colors.length; j++) {
-        console.log(`- ${colors[j]}`);
-        if (colors[j] === "Green") {
-            break mainLoop;
-        }
-    }
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    console.log("Skipping i =", i);
+    continue; // skip current iteration, move to next
+  }
+  console.log(i);
 }

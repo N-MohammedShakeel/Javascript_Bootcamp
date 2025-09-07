@@ -1,16 +1,13 @@
 /*
-    Function
-        - Default Function Parameters
-        - Function Parameters Default [Undefined]
-        - Old Strategies [Condition + Logical Or]
-        - ES6 Method
+    ==============================
+    📌 DEFAULT PARAMETERS
+    ==============================
+    - Allows setting default value for parameters
 */
 
-function sayHello(username = "Unknown", age = "Unknown") {
-    // if (age === undefined) {
-    //   age = "Unknown";
-    // }
-    // age = age || "Unknown";
-    return `Hello ${username} Your Age Is ${age}`;
+function greet(name = "Guest") {
+  console.log("Hello", name);
 }
-console.log(sayHello());
+
+greet("Alice"); // Hello Alice
+greet(); // Hello Guest

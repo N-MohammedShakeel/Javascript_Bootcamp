@@ -1,13 +1,18 @@
 /*
-    Scope
-        - Block Scope [If, Switch, For]
+    ==============================
+    📌 BLOCK SCOPE
+    ==============================
+    - Variables declared with let & const are block scoped.
+    - Variables declared with var are NOT block scoped (function-scoped).
 */
 
-var x = 10;
-
-if (10 === 10) {
-    let x = 50;
-    console.log(`From If Block ${x}`);
+if (true) {
+  var x = 10; // function-scoped
+  let y = 20; // block-scoped
+  const z = 30; // block-scoped
+  console.log("Inside block:", x, y, z);
 }
 
-console.log(`From Global ${x}`);
+console.log("Outside block: x =", x); // ✅ Works
+// console.log(y); // ❌ ReferenceError
+// console.log(z); // ❌ ReferenceError

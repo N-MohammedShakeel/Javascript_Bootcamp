@@ -1,42 +1,29 @@
 /*
-    Function
-        - Function Inside Function
-        - Return Function
+    ==============================
+    📌 RETURNING NESTED FUNCTIONS
+    ==============================
+    - Functions can return other functions.
+    - This is the foundation of closures.
 */
 
-// Example 1
-function sayMessage(fName, lName) {
-    let message = `Hello`;
-    // Nested Function
-    function concatMsg() {
-        message = `${message} ${fName} ${lName}`;
-    }
-    concatMsg();
-    return message;
+function outerFunction(outerValue) {
+  return function innerFunction(innerValue) {
+    console.log(`Outer: ${outerValue}, Inner: ${innerValue}`);
+  };
 }
-console.log(sayMessage("Osama", "Mohamed"));
 
-// Example 2
-function sayMessage(fName, lName) {
-    let message = `Hello`;
-    // Nested Function
-    function concatMsg() {
-        return `${message} ${fName} ${lName}`;
-    }
-    return concatMsg();
-}
-console.log(sayMessage("Osama", "Mohamed"));
+const greetOuter = outerFunction("Hello");
+greetOuter("World"); // Outer: Hello, Inner: World
 
-// Example 3
-function sayMessage(fName, lName) {
-    let message = `Hello`;
-    // Nested Function
-    function concatMsg() {
-        function getFullName() {
-            return `${fName} ${lName}`;
-        }
-        return `${message} ${getFullName()}`;
-    }
-    return concatMsg();
+// Example: create a multiplier function
+function createMultiplier(multiplier) {
+  return function (value) {
+    return value * multiplier;
+  };
 }
-console.log(sayMessage("Osama", "Mohamed"));
+
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15

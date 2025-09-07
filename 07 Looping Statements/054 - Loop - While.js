@@ -1,12 +1,15 @@
 /*
-    Loop
-        - While
+    ==============================
+    📌 WHILE LOOP
+    ==============================
+    Syntax:
+    while (condition) {
+        // code
+    }
 */
 
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
-let index = 0;
-
-while (index < products.length) {
-    console.log(products[index]);
-    index += 1;
+let i = 1;
+while (i <= 5) {
+  console.log("i =", i);
+  i++;
 }

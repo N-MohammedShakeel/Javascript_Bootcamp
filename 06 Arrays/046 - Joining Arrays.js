@@ -1,24 +1,20 @@
 /*
-    Arrays Methods [Joining]
-        - concat(array, array) => Return A New Array
-        - join(Separator)
+    ==============================
+    📌 JOINING & COMBINING ARRAYS
+    ==============================
 */
 
-let myFriends = ["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
-let myNewFriends = ["Samar", "Sameh"];
-let schoolFriends = ["Haytham", "Shady"];
+let cities = ["Delhi", "Mumbai", "Chennai"];
 
-let allFriends = myFriends.concat(
-    myNewFriends,
-    schoolFriends,
-    "Gameel",
-    [1, 2]
-);
+// ✅ join() → convert to string
+console.log(cities.join()); // "Delhi,Mumbai,Chennai"
+console.log(cities.join(" | ")); // "Delhi | Mumbai | Chennai"
 
-console.log(allFriends);
+// ✅ concat() → merge arrays
+let moreCities = ["Pune", "Goa"];
+let combined = cities.concat(moreCities);
+console.log(combined); // [ 'Delhi', 'Mumbai', 'Chennai', 'Pune', 'Goa' ]
 
-console.log(allFriends.join());
-console.log(allFriends.join(""));
-console.log(allFriends.join(" @ "));
-console.log(allFriends.join("|"));
-console.log(allFriends.join("|").toUpperCase());
+// ✅ spread (...) → modern way to merge
+let merged = [...cities, ...moreCities];
+console.log(merged); // [ 'Delhi', 'Mumbai', 'Chennai', 'Pune', 'Goa' ]

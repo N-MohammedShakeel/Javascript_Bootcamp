@@ -1,31 +1,28 @@
 /*
-    Arrays Methods [Adding And Removing]
-        - unshift("", "") Add Element To The First
-        - push("", "") Add Element To The End
-        - shift() Remove First Element From Array
-        - pop() Remove Last Element From Array
+    ==============================
+    📌 ADDING & REMOVING ELEMENTS
+    ==============================
 */
 
-let myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa"];
+let animals = ["Dog", "Cat", "Elephant"];
 
-console.log(myFriends);
+// ✅ push() → Add at end
+animals.push("Lion");
+console.log(animals); // [ 'Dog', 'Cat', 'Elephant', 'Lion' ]
 
-myFriends.unshift("Osama", "Nabil");
+// ✅ pop() → Remove from end
+animals.pop();
+console.log(animals); // [ 'Dog', 'Cat', 'Elephant' ]
 
-console.log(myFriends);
+// ✅ unshift() → Add at start
+animals.unshift("Tiger");
+console.log(animals); // [ 'Tiger', 'Dog', 'Cat', 'Elephant' ]
 
-myFriends.push("Samah", "Eman");
+// ✅ shift() → Remove from start
+animals.shift();
+console.log(animals); // [ 'Dog', 'Cat', 'Elephant' ]
 
-console.log(myFriends);
-
-let first = myFriends.shift();
-
-console.log(myFriends);
-
-console.log(`First Name Is ${first}`);
-
-let last = myFriends.pop();
-
-console.log(myFriends);
-
-console.log(`Last Name Is ${last}`);
+// ✅ splice() → Add/Remove from specific index
+animals.splice(1, 1, "Horse", "Cow");
+// remove 1 element at index 1, add Horse & Cow
+console.log(animals); // [ 'Dog', 'Horse', 'Cow', 'Elephant' ]

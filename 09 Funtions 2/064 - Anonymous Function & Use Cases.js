@@ -1,22 +1,25 @@
 /*
-    Function
-        - Anonymous Function
-        - Calling Named Function vs Anonymous Function
-        - Argument To Other Function
-        - Task Without Name
-        - SetTimeout
+    ==============================
+    📌 ANONYMOUS FUNCTIONS
+    ==============================
+    - Functions without a name.
+    - Usually assigned to variables or passed as arguments.
 */
 
-let calculator = function (num1, num2) {
-    return num1 + num2;
+// 1. Assigning anonymous function to a variable
+const greet = function (name) {
+  console.log("Hello", name);
 };
-console.log(calculator(10, 20));
+greet("Alice");
 
-function sayHello() {
-    console.log("Hello Osama");
-}
-document.getElementById("show").onclick = sayHello;
-
-setTimeout(function elzero() {
-    console.log("Good");
+// 2. Passing anonymous function as a callback
+setTimeout(function () {
+  console.log("This message is shown after 2 seconds");
 }, 2000);
+
+// 3. Using with array methods
+const numbers = [1, 2, 3];
+const doubled = numbers.map(function (num) {
+  return num * 2;
+});
+console.log(doubled); // [2, 4, 6]

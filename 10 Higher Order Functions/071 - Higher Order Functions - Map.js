@@ -1,50 +1,31 @@
 /*
-    Higher Order Functions
-        ---> is a function that accepts functions as parameters and/or returns a function.
-
-    - Map
-        --- method creates a new array
-        --- populated with the results of calling a provided function on every element
-        --- in the calling array.
-
-    Syntax map(callBackFunction(Element, Index, Array) { }, thisArg)
-        - Element => The current element being processed in the array.
-        - Index => The index of the current element being processed in the array.
-        - Array => The Current Array
-
-    Notes
-        - Map Return A New Array
-
-    Examples
-        - Anonymous Function
-        - Named Function
-
+    ==============================
+    📌 HOF: MAP()
+    ==============================
+    - map() creates a NEW array by applying a function to each element.
+    - Does NOT modify the original array.
+    - Syntax:
+        array.map((element, index, array) => { ... })
 */
 
-let myNums = [1, 2, 3, 4, 5, 6];
-let newArray = [];
+const numbers = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < myNums.length; i++) {
-    newArray.push(myNums[i] + myNums[i]);
-}
-console.log(newArray);
+// Example 1: Double each number
+const doubled = numbers.map((num) => num * 2);
+console.log("Original:", numbers); // [1, 2, 3, 4, 5]
+console.log("Doubled:", doubled); // [2, 4, 6, 8, 10]
 
-// Same Idea With Map
-
-// let addSelf = myNums.map(function (element, index, arr) {
-//   // console.log(`Current Element => ${element}`);
-//   // console.log(`Current Index => ${index}`);
-//   // console.log(`Array => ${arr}`);
-//   // console.log(`This => ${this}`);
-//   return element + element;
-// }, 10);
-
-// let addSelf = myNums.map((a) => a + a);
-
-// console.log(addSelf);
-
-function addition(ele) {
-    return ele + ele;
-}
-let add = myNums.map(addition);
-console.log(add);
+// Example 2: Return objects
+const users = ["Alice", "Bob", "Charlie"];
+const userObjects = users.map((name, index) => ({
+  id: index + 1,
+  username: name,
+}));
+console.log(userObjects);
+/*
+[
+  { id: 1, username: 'Alice' },
+  { id: 2, username: 'Bob' },
+  { id: 3, username: 'Charlie' }
+]
+*/

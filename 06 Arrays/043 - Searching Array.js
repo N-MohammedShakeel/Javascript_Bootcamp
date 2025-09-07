@@ -1,26 +1,23 @@
 /*
-    Arrays Methods [Search]
-        - indexOf(Search Element, From Index [Opt])
-        - lastIndexOf(Search Element, From Index [Opt])
-        - includes(valueToFind, fromIndex [Opt]) [ES7]
+    ==============================
+    📌 SEARCHING IN ARRAYS
+    ==============================
 */
 
-let myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa", "Ahmed"];
+let numbers = [10, 20, 30, 40, 50, 60];
 
-console.log(myFriends);
+// ✅ indexOf()
+console.log(numbers.indexOf(30)); // 2
+console.log(numbers.indexOf(100)); // -1 (not found)
 
-console.log(myFriends.indexOf("Ahmed"));
-console.log(myFriends.indexOf("Ahmed", 2));
+// ✅ includes()
+console.log(numbers.includes(50)); // true
+console.log(numbers.includes(90)); // false
 
-console.log(myFriends.lastIndexOf("Ahmed"));
-console.log(myFriends.lastIndexOf("Ahmed", -2));
+// ✅ find()
+let found = numbers.find((num) => num > 30);
+console.log(found); // 40 (first match)
 
-console.log(myFriends.includes("Ahmed"));
-console.log(myFriends.includes("Ahmed", 2));
-
-if (myFriends.lastIndexOf("Osama") === -1) {
-    console.log("Not Found");
-}
-
-console.log(myFriends.indexOf("Osama"));
-console.log(myFriends.lastIndexOf("Osama"));
+// ✅ findIndex()
+let idx = numbers.findIndex((num) => num > 30);
+console.log(idx); // 3

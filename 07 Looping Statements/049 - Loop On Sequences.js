@@ -1,25 +1,19 @@
 /*
-    Loop
-        - Loop On Sequences
+    ==============================
+    📌 LOOPING ON SEQUENCES
+    ==============================
+    - We can use loops to go through arrays, strings, etc.
 */
 
-let myFriends = [1, 2, "Osama", "Ahmed", 3, 4, "Sayed", 6, "Ali"];
-let onlyNames = [];
+let fruits = ["Apple", "Banana", "Mango"];
 
-for (let i = 0; i < myFriends.length; i++) {
-    if (typeof myFriends[i] === "string") {
-        onlyNames.push(myFriends[i]);
-    }
+// ✅ Using for loop on array
+for (let i = 0; i < fruits.length; i++) {
+  console.log("Fruit:", fruits[i]);
 }
 
-console.log(onlyNames);
-
-// console.log(myFriends[0]);
-// console.log(myFriends[1]);
-// console.log(myFriends[2]);
-// console.log(myFriends[3]);
-// console.log(myFriends[4]);
-
-// for (let i = 0; i < myFriends.length; i++) {
-//   console.log(myFriends[i]);
-// }
+// ✅ Using for loop on string
+let word = "Hello";
+for (let i = 0; i < word.length; i++) {
+  console.log(word[i]);
+}
